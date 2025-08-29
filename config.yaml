@@ -1,0 +1,5 @@
+horizon_days: 21
+key_tenors: [2, 3, 5, 7, 10, 20, 30]
+dv01_target: 0.0
+krd_band: 0.1
+repo_spread_bps: 0

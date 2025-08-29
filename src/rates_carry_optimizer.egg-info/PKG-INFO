@@ -1,0 +1,10 @@
+Metadata-Version: 2.4
+Name: rates-carry-optimizer
+Version: 0.1.0
+Summary: Carry & roll-down optimizer for rates
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+
+# Rates Carry & Roll-down Optimizer (Starter)
+
+See README for quick start.

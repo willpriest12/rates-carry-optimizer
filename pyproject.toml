@@ -1,0 +1,15 @@
+[build-system]
+requires = ["setuptools>=65", "wheel"]
+build-backend = "setuptools.build_meta"
+[project]
+name = "rates-carry-optimizer"
+version = "0.1.0"
+description = "Carry & roll-down optimizer for rates"
+readme = "README.md"
+requires-python = ">=3.10"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
