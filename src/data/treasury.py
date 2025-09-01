@@ -8,6 +8,7 @@ import pandas as pd
 import requests
 from io import StringIO
 import pandas as pd
+from curves.yield_curve import YieldCurve
 
 
 FRED_SERIES = {
@@ -68,3 +69,19 @@ def fetch_treasury_curve():
 
     # Return the final DataFrame: index = dates, columns = maturities, values = yields
     return out
+
+def get_latest_curve():
+    '''fetch most recent Treasury curve as a YieldCurve object'''
+    df = fetch_treasury_curve()
+    date = df.index[-1]
+    row = df.iloc[-1]
+    return YieldCurve(date, row)
+
+def get_curve_on(date: str):
+    '''fetch curve for a specific date (YYYY-MM-DD) as YieldCurve object'''
+    df = fetch_treasury_curve()
+    row = df.loc[date]
+    return YieldCurve(pd.to_datetime(date), row)
+
+
+    
